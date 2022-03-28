@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CADASTRO</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <section>
+            <div id="logo"><img src="logo_pacatuba.png" alt="Prefeitura Municipal de Pacatuba-CE" height="150px"></div>
+            <div id="cert-num">CERTIFICADO Nº: <input type="number" name="ncert" id="ncert"></div>
+            <h3>CERTIFICADO DE REGISTRO CADASTRAL - CRC</h3>
+                <form>
+                    <div id="div-content">
+                        <table style="width:100%">
+                            <tr>
+                              <th>Empresa:</th>
+                              <th>CNPJ: </th>
+                            </tr>
+                            <tr>
+                              <td><div id="razaosocial"></div></td>
+                              <!--<td><input size="61" type="text" id="razaosocial" name="razaosocial" style="text-transform: uppercase"></td>-->
+                              <td><input size="14" type="text" onchange="checkCnpj(this.value)" style="text-transform: uppercase" data-mask="00.000.000/0000-00" id="cnpj"></td>
+                            </tr>
+                            </table>
+                    </div>
+                    <div id="div-content">
+                        <table style="width:100%">
+                            <tr>
+                              <th>Endereço:</th>
+                              <th>Número: </th>
+                              <th>Complem: </th>
+                              <th>Bairro: </th>
+                            </tr>
+                            <tr>
+                              <td><input size="41" type="text" id="logradouro" style="text-transform: uppercase"></td>
+                              <td><input size="6" type="text" id="numero" style="text-transform: uppercase"></td>
+                              <td><input size="6" type="text" id="complemento" style="text-transform: uppercase"></td>
+                              <td><input size="12" type="text" id="bairro" style="text-transform: uppercase"></td>
+                            </tr>
+                            </table>
+                    </div>
+                    <div id="div-content">
+                        <table style="width:100%">
+                            <tr>
+                              <th>CEP:</th>
+                              <th>Cidade: </th>
+                              <th>Estado: </th>
+                              <th>Telefone: </th>
+                            </tr>
+                            <tr>
+                              <td><input size="12" type="text" id="cep" data-mask="00.000-000"></td>
+                              <td><input size="30" type="text" id="municipio" style="text-transform: uppercase"></td>
+                              <td><input size="10" type="text" id="uf" style="text-transform: uppercase"></td>
+                              <td><input size="13" type="text" id="telefone" ></td>
+                            </tr>
+                            </table>
+                    </div>
+                    <div id="div-content">
+                        <table style="width:100%">
+                            <tr>
+                              <th>E-mail:</th>
+                              <th>Administrador: </th>
+                              <th>CPF Administrador: </th>
+                            </tr>
+                            <tr>
+                              <td><input size="25" type="text" id="email"></td>
+                              <td><input size="30" type="text" id="admin" style="text-transform: uppercase"></td>
+                              <td><input size="15" type="text" id="cpf" data-mask="000.000.000-00"></td>
+                            </tr>
+                            </table>
+                    </div>
+                    <div id="div-content">
+                        <table style="width:100%">
+                            <tr>
+                                <th>Capital Social:</th>
+                                <th>CGF:</th>
+                                <th>ISS:</th>
+                                <th>Início das Atividades:</th>
+                            </tr>
+                            <tr>
+                                <td><input size="17" type="text" id="capital_social"></td>
+                                <td><input size="16" type="text" id="cgf"></td>
+                                <td><input size="16" type="text" id="iss"></td>
+                                <td><input size="16" type="text" id="inicioatividades" data-mask="00/00/0000"></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div id="div-content">  
+                        <table style="width:100%">
+                            <tr>
+                              <th>Objeto Social:</th>
+                            </tr>
+                            <tr>
+                              <td><input size="81" type="text" id="atividade_principal"></td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div id="div-content"><div id="center"><strong>VALIDADE DE DOCUMENTOS</strong></div>
+                        <table style="width:100%">
+                            <tr>
+                                <th>Documento/Certidão:</th>
+                                <th>Emissão:</th>
+                                <th>Validade:</th>
+                            </tr>
+                            <tr>
+                                <td>CND Tributos Federais</td>
+                                <td><input size="20" type="text" id="razaosocial" data-mask="00/00/0000"></td>
+                                <td><input size="20" type="text" id="razaosocial" data-mask="00/00/0000"></td>
+                            </tr>
+                            <tr>
+                                <td>CND Tributos Estaduais</td>
+                                <td><input size="20" type="text" id="razaosocial" data-mask="00/00/0000"></td>
+                                <td><input size="20" type="text" id="razaosocial" data-mask="00/00/0000"></td>
+                            </tr>
+                            <tr>
+                                <td>CND Tributos Municipais</td>
+                                <td><input size="20" type="text" id="razaosocial" data-mask="00/00/0000"></td>
+                                <td><input size="20" type="text" id="razaosocial" data-mask="00/00/0000"></td>
+                            </tr>
+                            <tr>
+                                <td>CRF FGTS</td>
+                                <td><input size="20" type="text" id="razaosocial" data-mask="00/00/0000"></td>
+                                <td><input size="20" type="text" id="razaosocial" data-mask="00/00/0000"></td>
+                            </tr>
+                            <tr>
+                                <td>CND Trabalhista</td>
+                                <td><input size="20" type="text" id="razaosocial" data-mask="00/00/0000"></td>
+                                <td><input size="20" type="text" id="razaosocial" data-mask="00/00/0000"></td>
+                            </tr>
+                            <tr>
+                                <td>Certidão de Falência ou Concordata</td>
+                                <td><input size="20" type="text" id="razaosocial" data-mask="00/00/0000"></td>
+                                <td><input size="20" type="text" id="razaosocial" data-mask="00/00/0000"></td>
+                            </tr>
+                            <tr>
+                                <td>Registro CREA</td>
+                                <td><input size="20" type="text" id="razaosocial" data-mask="00/00/0000"></td>
+                                <td><input size="20" type="text" id="razaosocial" data-mask="00/00/0000"></td>
+                            </tr>
+                            <tr>
+                                <td>Registro Sanitário ANVISA</td>
+                                <td><input size="20" type="text" id="razaosocial" data-mask="00/00/0000"></td>
+                                <td><input size="20" type="text" id="razaosocial" data-mask="00/00/0000"></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div id="div-content">
+                        <table style="width:100%">
+                            <tr>
+                              <th id="center">OBSERVAÇÃO</th>
+                            </tr>
+                            <tr>
+                              <td id="justify">O CERTIFICADO DE REGISTRO CADASTRAL - CRC, SOMENTE TERÁ VALIDADE COM OS DOCUMENTOS E CERTIDÕES ACIMA ATUALIZADOS.</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div id="div-content">
+                        <table style="width:100%">
+                            <tr>
+                              <th id="center">CERTIFICADO:</th>
+                            </tr>
+                            <tr>
+                              <td id="justify">CERTIFICAMOS QUE A EMPRESA ACIMA IDENTIFICADA ENTREGOU A DOCUMENTAÇÃO RELACIONADA, DESSA FORMA CUMPRINDO AS EXIGÊNCIAS PARA O CADASTRAMENTO, CONFORME A LEI Nº 8.666, DE 21 DE JUNHO DE 1993.</td>
+                            </tr>
+                        </table>
+                    </div>
+                </form>
+        </section>
+    <footer>    
+    </footer>
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</body>
+</html>
